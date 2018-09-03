@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="header"></div>
+        <div class="content">
+            <div class="kat">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt error cupiditate laborum
+                ratione, aspernatur voluptates, commodi officiis explicabo consectetur delectus tempore ea, voluptas exercitationem
+                quae corrupti ab. Eveniet, esse fuga.</div>
+            <div class="render">2</div>
+        </div>
+        <div class="footer">3</div>
+    </div>
+    <div id="modal" class="mymodal">
+        <div class="div-header">head</div>
+        <div class="div-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio odit corporis labore necessitatibus
+            ea doloribus deserunt ipsum perspiciatis alias officiis animi est, provident et cupiditate quis cum voluptatibus
+            consequatur maxime.</div>
+        <div class="div-footer">foot</div>
+    </div>
+</body>
+<button id="button" class="btn">tikla</button>
+<script>
+    var stat = true;
+    var modal = document.getElementById('modal');
+    var btn = document.getElementById('button');
+    btn.addEventListener("click", goster);
+    function goster() {
+        if (stat) {
+            modal.style.display = 'block';
+            stat = false;
+        }
+        else {
+            modal.style.display = 'none';
+            stat = true;
+            console.log("2. " + stat);
+        }
+            //setTimeout(goster, 1000);
+
+    }
+    //goster();
+
+</script>
+
+</html>

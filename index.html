@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ana Sayfa</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" id="search" placeholder="ssss" onkeyup="ara()" />
+    </div>
+    <div>
+        <ul id="myul">
+            <li>Seyfi</li>
+            <li>Mert</li>
+            <li>Hakan</li>
+            <li>Arkın</li>
+        </ul>
+    </div>
+    <script>
+
+        function ara() {
+            console.log(event.keyCode);
+            var input, filter, myul, myli, g;
+            var input = document.getElementById("search");//input texte ulaşıldı
+            filter = input.value.toUpperCase();//input taki deger alındı ve büyük harfe çevrildi
+            myul = document.getElementById("myul");
+            myli = myul.getElementsByTagName("li");
+            for (let i = 0; i < myli.length; i++) {
+                g = myli[i].textContent.toUpperCase();//
+                if (g.indexOf(filter) != -1) {
+                    myli[i].style.display = "block";
+                }
+                else {
+                    myli[i].style.display = "none";
+                }
+            }
+        }
+        const personels = [
+            {
+                name: "seyfi", age: 24
+            },
+            {
+                name: "murat", age: 34
+            },
+            {
+                name: "ahmet", age: 14
+            },
+            {
+                name: "nur", age: 28
+            },
+        ];
+
+        /* var result=personels.map(res=>res.json());
+        console.log(result); */
+     /*    var conf = confirm("Click 'Yes' or 'Cancel'");
+        if (conf == true) {
+            alert("yes");
+        }
+        else {
+            aletrt("no");
+        } */
+        console.log(3=="3");
+        console.log(3=== 3);
+        console.log(true=="1");
+        var a;
+        console.log(a);
+        console.log(typeof null);
+        console.log(!!null);
+    </script>
+</body>
+
+</html>
